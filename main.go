@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"reflect"
 
+	"github.com/iRajesha/experiments/src/myinterface"
 	"github.com/iRajesha/experiments/src/panic"
 )
 
@@ -85,4 +86,7 @@ func playWithEmptyInterface(spreadedArgs interface{}) {
 	newName := spreadedArgs.(*Persons)
 
 	fmt.Printf("Address -- %v\n", newName)
+
+	myinterface.DemonstrateInterfaceUsage()
+
 }
