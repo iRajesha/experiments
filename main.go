@@ -76,6 +76,13 @@ backToFor:
 	fmt.Printf("Right after for loop\n")
 
 	panic.CheckPanicInGo()
+	i = 1
+
+	str1 := "String"
+	str1 = str1 + fmt.Sprintf("_%v", i)
+	fmt.Printf("Concatinated value is %v", str1)
+
+	extractInterfaceType(ray)
 
 }
 
@@ -85,4 +92,13 @@ func playWithEmptyInterface(spreadedArgs interface{}) {
 	newName := spreadedArgs.(*Persons)
 
 	fmt.Printf("Address -- %v\n", newName)
+}
+
+func extractInterfaceType(i interface{}) {
+
+	switch i := i.(type) {
+	case Persons:
+		fmt.Printf("Found a person %v\n", i.name)
+	}
+
 }
