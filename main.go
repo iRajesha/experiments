@@ -90,8 +90,15 @@ backToFor:
 	extractInterfaceType(ray)
 
 	checkMarshalling()
-	fmt.Printf("\n\n\n\n\n\n\n")
+	fmt.Printf("\n\n\n\n\n")
 	gernateBusinessObjectId()
+	//var empty interface{}
+	bMarshalled, _ := json.Marshal("CCSNonProd")
+	fmt.Printf("Marshhed string(byte) %v\n", string(bMarshalled))
+	bytes := []byte("CCSNonProd")
+	//json.Unmarshal([]byte(IkNDU05vblByb2Qi), empty)
+	//fmt.Printf("%v", empty)
+	fmt.Printf("CCSNonProd value -> %v", string(bytes))
 
 }
 
